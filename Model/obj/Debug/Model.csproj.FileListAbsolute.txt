@@ -1,0 +1,4 @@
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Model\bin\Debug\Model.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Model\bin\Debug\Model.pdb
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Model\obj\Debug\Model.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Model\obj\Debug\Model.pdb

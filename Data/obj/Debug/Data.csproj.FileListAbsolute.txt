@@ -1,0 +1,12 @@
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\Data.dll.config
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\Data.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\Data.pdb
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\EntityFramework.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\Model.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\Model.pdb
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\EntityFramework.xml
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\obj\Debug\Data.dll
+E:\Documentos Johana\Pruebas\TestCSW\BookLibraryF\Data\obj\Debug\Data.pdb

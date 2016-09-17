@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookLibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BookDatas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Authors_Id" Type="int" />
+    <Property Name="Categories_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_BookData_Author">
+    <End Role="Authors" Type="Self.Authors" Multiplicity="0..1" />
+    <End Role="BookDatas" Type="Self.BookDatas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookDatas">
+        <PropertyRef Name="Authors_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookData_Category">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="BookDatas" Type="Self.BookDatas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookDatas">
+        <PropertyRef Name="Categories_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BookLibraryModelStoreContainer">
+    <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BookDatas" EntityType="Self.BookDatas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BookData_Author" Association="Self.FK_BookData_Author">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="BookDatas" EntitySet="BookDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookData_Category" Association="Self.FK_BookData_Category">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="BookDatas" EntitySet="BookDatas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
